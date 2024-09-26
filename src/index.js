@@ -25,21 +25,21 @@ app.get("/hello", (req, res, next) => {
   });
 });
 
-app.get("/leads", async (req, res, next) => {
+app.get("/api/leads", async (req, res, next) => {
   const results = await crud.getLeads();
   return res.status(200).json({
     results: results,
   });
 });
 
-app.get("/leads/:id", async (req, res, next) => {
+app.get("/api/leads/:id", async (req, res, next) => {
   const result = await crud.getLead(req.params.id);
   return res.status(200).json({
     result: result,
   });
 });
 
-app.post("/leads", async (req, res, next) => {
+app.post("/api/leads", async (req, res, next) => {
   const postData = await req.body;
   // validation?
   const { data, hasError, message } = await validateLead(postData);

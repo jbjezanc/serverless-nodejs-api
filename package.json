@@ -6,6 +6,8 @@
     "dev": "serverless offline --stage dev",
     "info": "serverless info --stage prod --region eu-central-1",
     "deploy": "serverless deploy --stage prod --region eu-central-1",
+    "deploy-dev-stage": "serverless deploy --stage dev --region eu-central-1",
+    "info-dev-stage": "serverless info --stage dev --region eu-central-1",
     "remove": "serverless remove --stage prod --region eu-central-1",
     "generate": "npx drizzle-kit generate --config=drizzle.config.cjs",
     "migrate": "tsx src/cli/migrator.js"
