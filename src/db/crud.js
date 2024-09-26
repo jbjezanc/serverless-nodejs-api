@@ -17,7 +17,7 @@ async function newLead({ email }) {
   return result;
 }
 
-async function listLeads() {
+async function getLeads() {
   const db = await client.getDrizzleDbClient();
   const results = await db
     .select()
@@ -41,5 +41,5 @@ async function getLead(id) {
 }
 
 module.exports.newLead = newLead;
-module.exports.listLeads = listLeads;
+module.exports.getLeads = getLeads;
 module.exports.getLead = getLead;
